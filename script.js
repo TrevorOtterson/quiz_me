@@ -1,6 +1,6 @@
-var aButton = document.querySelector("#")
-var bButton = document.querySelector("#")
-var cButton = document.querySelector("#")
+var statusSpan = document.querySelector("#status");
+var minutesDisplay = document.querySelector("#minutes");
+var secondsDisplay = document.querySelector("#seconds");
 
 var totalSeconds = 0
 var secondsElapsed = 0
