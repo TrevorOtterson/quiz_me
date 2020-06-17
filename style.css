@@ -8,25 +8,26 @@
     width: 70%;
     position: absolute;
     background: rgba(255, 230, 230, 0.87);
-    padding: 3%;
+    padding: 2%;
     border: 2px solid #000000;
-    box-shadow: rgb(158, 158, 158);
+    box-shadow: rgb(0, 0, 0);
 
 }
 
 .quizTitle{
     vertical-align: top;
-    padding-top: 1%;
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
     font-family: 'MuseoModerno', cursive;
+    padding-bottom: 3%;
 }
 
 .question{
     padding: 1%;
     font-size: 24px;
     background: rgb(255, 196, 196);
+    border: 2px solid black;
     color: tomato;
     margin: 10px, 0, 10px, 0;
 }
@@ -36,6 +37,7 @@
     width: 100%;
     display: block;
     background: rgba(255, 230, 230, 0.87);
+    padding-left: 1%;
 }
 .option:hover{
     background: rgb(255, 196, 196);
@@ -46,16 +48,18 @@
     font-family: 'MuseoModerno', cursive;
     float: right;
     vertical-align: bottom;
+    border:1px solid black;
 }
 .next_button:hover{
     background-color: cornflowerblue;
-    color: white
+    color: white;
 }
 
 .prev_button{
     font-family: 'MuseoModerno', cursive;
     float: left;
     vertical-align: bottom;
+    border:1px solid black;
 }
 .prev_button:hover{
     background-color: cornflowerblue;
@@ -75,6 +79,7 @@
     position: absolute;
     background: rgba(255, 230, 230, 0.87);
     padding: 1%;
+    padding-bottom: 1%;
     border: 2px solid #000000;
     box-shadow: rgb(158, 158, 158);
     color: tomato;

@@ -78,7 +78,7 @@ function loadNextQuestion () {
     if(currentQuestion == totalQuestions){
         container.style.display = 'none'
         results.style.display = ''
-        results.textContent = 'Score: ' + score
+        results.textContent = 'Score: ' + score + ' / ' + totalQuestions
         return
     }
     loadQuestions(currentQuestion)
