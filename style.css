@@ -11,7 +11,19 @@
     padding: 2%;
     border: 2px solid #000000;
     box-shadow: rgb(0, 0, 0);
+}
 
+.container2{
+    margin: 10%;
+    margin-left: 37%;
+    height: 4%;
+    width: 26%;
+    position: absolute;
+    background: rgb(194, 194, 194);
+    border: 2px solid #000000;
+    box-shadow: rgb(0, 0, 0);
+    padding-left: 1%;
+    font-family: 'MuseoModerno', cursive;
 }
 
 .quizTitle{

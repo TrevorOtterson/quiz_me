@@ -1,3 +1,4 @@
+// variables
 var statusSpan = document.querySelector("#status");
 var minutesDisplay = document.querySelector("#minutes");
 var secondsDisplay = document.querySelector("#seconds");
@@ -7,8 +8,7 @@ var secondsElapsed = 0
 var status = "started"
 var interval
 
-//getTimePreferences()
-
+// Format minutes into timer
 function getFormattedMinutes() {
     var secondsLeft = totalSeconds - secondsElapsed
     var minutesLeft = Math.floor(secondsLeft / 60)
@@ -19,10 +19,10 @@ function getFormattedMinutes() {
     } else {
         formattedMinutes = minutesLeft
     }
-
     return formattedMinutes
 }
 
+// Format seconds into timer
 function getFormattedSeconds() {
     var secondsLeft = (totalSeconds - secondsElapsed) % 60
     var formattedSeconds
@@ -32,14 +32,15 @@ function getFormattedSeconds() {
     } else {
         formattedSeconds = secondsLeft
     }
-
     return formattedSeconds
 }
 
+// Empty variables (placeholders)
 var currentQuestion = 0
 var score = 0
 var totalQuestions = questions.length
 
+// Calling IDs from HTML file
 var container = document.getElementById("quizContainer")
 var questionEl = document.getElementById("questions")
 var option1 = document.getElementById("opt1")
@@ -49,7 +50,8 @@ var option4 = document.getElementById("opt4")
 var nextButton = document.getElementById("next_button")
 var results = document.getElementById("results")
 
-function loadQuestions (qIndex) {
+// Pulls questions objects out of array in questions.js
+function loadQuestions(qIndex) {
     var q = questions[qIndex]
     questionEl.textContent = (qIndex + 1) + '. ' + q.question
     option1.textContent = q.option1
@@ -58,24 +60,24 @@ function loadQuestions (qIndex) {
     option4.textContent = q.option4
 }
 
-
-function loadNextQuestion () {
+// Loads next quiz question
+function loadNextQuestion() {
     var selected = document.querySelector('input[type=radio]:checked')
-    if(!selected) {
+    if (!selected) {
         alert("Must select a possible answer.")
         return
     }
     var answer = selected.value
-    if(questions[currentQuestion].answer == answer){
-        score +=1
+    if (questions[currentQuestion].answer == answer) {
+        score += 1
     }
     selected.checked = false
     currentQuestion++
-    if(currentQuestion == totalQuestions.value){
+    if (currentQuestion == totalQuestions.value) {
         nextButton.textContent = 'Finish Quiz'
-        
+
     }
-    if(currentQuestion == totalQuestions){
+    if (currentQuestion == totalQuestions) {
         container.style.display = 'none'
         results.style.display = ''
         results.textContent = 'Score: ' + score + ' / ' + totalQuestions
@@ -85,4 +87,6 @@ function loadNextQuestion () {
 }
 loadQuestions(currentQuestion)
 
+// Event listner for next and previous question buttons
 $("#nextButton").click(loadNextQuestion)
+//$("#prevButton").click(loadPrevQuestion)

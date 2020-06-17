@@ -1,3 +1,4 @@
+// Questions objects inside an array
 var questions = [{
     "question": "What is the 'soul' of a website?",
     "option1": " HTML",
