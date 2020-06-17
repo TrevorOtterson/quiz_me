@@ -56,8 +56,8 @@ function loadQuestions (qIndex) {
     option2.textContent = q.option2
     option3.textContent = q.option3
     option4.textContent = q.option4
-    debugger
 }
+
 
 function loadNextQuestion () {
     var selected = document.querySelector('input[type=radio]:checked')
@@ -71,8 +71,9 @@ function loadNextQuestion () {
     }
     selected.checked = false
     currentQuestion++
-    if(currentQuestion == totalQuestions - 1){
-        next_button.textContent = 'Finish'
+    if(currentQuestion == totalQuestions.value){
+        nextButton.textContent = 'Finish Quiz'
+        
     }
     if(currentQuestion == totalQuestions){
         container.style.display = 'none'
@@ -82,7 +83,6 @@ function loadNextQuestion () {
     }
     loadQuestions(currentQuestion)
 }
-
 loadQuestions(currentQuestion)
 
 $("#nextButton").click(loadNextQuestion)

@@ -26,8 +26,8 @@
 .question{
     padding: 1%;
     font-size: 24px;
-    background: rgb(148, 0, 0);
-    color: red;
+    background: rgb(255, 196, 196);
+    color: tomato;
     margin: 10px, 0, 10px, 0;
 }
 
@@ -37,7 +37,6 @@
     display: block;
     background: rgba(255, 230, 230, 0.87);
 }
-
 .option:hover{
     background: rgb(255, 196, 196);
     color: black;
@@ -69,5 +68,16 @@
 }
 
 .container_result{
-
+    margin: 30%;
+    height: 15%;
+    width: 40%;
+    font-size: 45px;
+    position: absolute;
+    background: rgba(255, 230, 230, 0.87);
+    padding: 1%;
+    border: 2px solid #000000;
+    box-shadow: rgb(158, 158, 158);
+    color: tomato;
+    text-align: center;
+    vertical-align: center;
 }
