@@ -27,6 +27,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <!-- Questions and buttons -->  
   <div id="quizContainer" class="container">
     <div class="quizTitle">« Coding Quiz «</div>
     <div id="questions" class="question"></div>
@@ -39,12 +41,15 @@
   </div>
   <div id="results" class="container_result" style="display:none">
   </div>
+
+  <!-- Timer -->
+  <button id="startBtn">Start Quiz</button>
+  <div id="timerContainer" class="container2">
+    <div class="timerTitle">Time Remaining = <span id="timer"></span></div>
+  </div>
+
   <script src="questions.js"></script>
   <script src="script.js"></script>
-
-  <div id="timerContainer" class="container2">
-    <div class="timerTitle">Time Remaining: </div>
-  </div>
 </body>
 
 </html>

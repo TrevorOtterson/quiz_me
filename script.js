@@ -1,40 +1,18 @@
+// Timer
 // variables
-var statusSpan = document.querySelector("#status");
-var minutesDisplay = document.querySelector("#minutes");
-var secondsDisplay = document.querySelector("#seconds");
+var sec = 45;
+var time = setInterval(timer, 1000);
 
-var totalSeconds = 0
-var secondsElapsed = 0
-var status = "started"
-var interval
-
-// Format minutes into timer
-function getFormattedMinutes() {
-    var secondsLeft = totalSeconds - secondsElapsed
-    var minutesLeft = Math.floor(secondsLeft / 60)
-    var formattedMinutes
-
-    if (minutesLeft < 10) {
-        formattedMinutes = "0" + minutesLeft
-    } else {
-        formattedMinutes = minutesLeft
+function timer() {
+    document.getElementById('timer').innerHTML = sec + " seconds";
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        alert("Out of time!");
     }
-    return formattedMinutes
 }
 
-// Format seconds into timer
-function getFormattedSeconds() {
-    var secondsLeft = (totalSeconds - secondsElapsed) % 60
-    var formattedSeconds
-
-    if (secondsLeft < 10) {
-        formattedSeconds = "0" + secondsLeft
-    } else {
-        formattedSeconds = secondsLeft
-    }
-    return formattedSeconds
-}
-
+// Questions
 // Empty variables (placeholders)
 var currentQuestion = 0
 var score = 0
@@ -74,7 +52,7 @@ function loadNextQuestion() {
     selected.checked = false
     currentQuestion++
     if (currentQuestion == totalQuestions.value) {
-        nextButton.textContent = 'Finish Quiz'
+        //***nextButton.textContent = 'Finish Quiz'***//
 
     }
     if (currentQuestion == totalQuestions) {
@@ -89,4 +67,5 @@ loadQuestions(currentQuestion)
 
 // Event listner for next and previous question buttons
 $("#nextButton").click(loadNextQuestion)
+$("#startBtn").click(timer)
 //$("#prevButton").click(loadPrevQuestion)
