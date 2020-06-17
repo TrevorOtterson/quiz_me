@@ -1,14 +1,13 @@
 // Timer
 // variables
-var sec = 45;
-var time = setInterval(timer, 1000);
-
 function timer() {
-    document.getElementById('timer').innerHTML = sec + " seconds";
-    sec--;
-    if (sec == -1) {
-        clearInterval(time);
-        alert("Out of time!");
+    var sec = 45
+    var time = setInterval(timer, 1000)
+    document.getElementById('timer').innerHTML = sec + " seconds"
+    sec --
+    if (sec === -1) {
+        clearInterval(time)
+        alert("Out of time!")
     }
 }
 
@@ -51,11 +50,11 @@ function loadNextQuestion() {
     }
     selected.checked = false
     currentQuestion++
-    if (currentQuestion == totalQuestions.value) {
+    if (currentQuestion === totalQuestions.value) {
         //***nextButton.textContent = 'Finish Quiz'***//
 
     }
-    if (currentQuestion == totalQuestions) {
+    if (currentQuestion === totalQuestions) {
         container.style.display = 'none'
         results.style.display = ''
         results.textContent = 'Score: ' + score + ' / ' + totalQuestions
