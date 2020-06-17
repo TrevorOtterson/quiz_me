@@ -8,13 +8,14 @@
     width: 70%;
     position: absolute;
     background: rgba(255, 230, 230, 0.87);
-    padding: 10%;
+    padding: 3%;
     border: 2px solid #000000;
     box-shadow: rgb(158, 158, 158);
 
 }
 
 .quizTitle{
+    vertical-align: top;
     padding-top: 1%;
     text-align: center;
     font-size: 30px;
@@ -31,22 +32,40 @@
 }
 
 .option{
-    width: 20%;
+    margin-top: 10px;
+    width: 100%;
     display: block;
+    background: rgba(255, 230, 230, 0.87);
+}
+
+.option:hover{
+    background: rgb(255, 196, 196);
+    color: black;
 }
 
 .next_button{
     font-family: 'MuseoModerno', cursive;
     float: right;
+    vertical-align: bottom;
+}
+.next_button:hover{
+    background-color: cornflowerblue;
+    color: white
 }
 
 .prev_button{
     font-family: 'MuseoModerno', cursive;
     float: left;
+    vertical-align: bottom;
+}
+.prev_button:hover{
+    background-color: cornflowerblue;
+    color: white
 }
 
 .timer{
-
+    font-family: 'MuseoModerno', cursive;
+    color: black;
 }
 
 .container_result{
