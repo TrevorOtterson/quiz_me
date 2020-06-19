@@ -1,14 +1,19 @@
 // Timer
-// variables
+var sec = 45
+var time
 function timer() {
-    var sec = 45
-    var time = setInterval(timer, 1000)
+    time = setInterval(interval, 1000)
+}
+
+function interval() {
     document.getElementById('timer').innerHTML = sec + " seconds"
     sec --
     if (sec === -1) {
         clearInterval(time)
+        finishQuiz()
         alert("Out of time!")
     }
+    console.log(sec)
 }
 
 // Questions
@@ -37,6 +42,12 @@ function loadQuestions(qIndex) {
     option4.textContent = q.option4
 }
 
+function finishQuiz() {
+    container.style.display = 'none'
+    results.style.display = ''
+    results.textContent = 'Score: ' + score + ' / ' + totalQuestions
+}
+
 // Loads next quiz question
 function loadNextQuestion() {
     var selected = document.querySelector('input[type=radio]:checked')
@@ -55,9 +66,7 @@ function loadNextQuestion() {
 
     }
     if (currentQuestion === totalQuestions) {
-        container.style.display = 'none'
-        results.style.display = ''
-        results.textContent = 'Score: ' + score + ' / ' + totalQuestions
+        finishQuiz()
         return
     }
     loadQuestions(currentQuestion)
