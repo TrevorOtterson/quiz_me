@@ -11,7 +11,7 @@ function interval() {
     if (sec === -1) {
         clearInterval(time)
         finishQuiz()
-        alert("Out of time!")
+        alert("Submitted")
     }
     console.log(sec)
 }
@@ -23,6 +23,8 @@ var score = 0
 var totalQuestions = questions.length
 
 // Calling IDs from HTML file
+var startScreen = document.querySelector(".jumbotron")
+var timeContainer = document.getElementById("timerContainer") 
 var container = document.getElementById("quizContainer")
 var questionEl = document.getElementById("questions")
 var option1 = document.getElementById("opt1")
@@ -43,6 +45,8 @@ function loadQuestions(qIndex) {
 }
 
 function finishQuiz() {
+    sec = 0
+    timeContainer.style.display = 'none'
     container.style.display = 'none'
     results.style.display = ''
     results.textContent = 'Score: ' + score + ' / ' + totalQuestions
@@ -62,7 +66,26 @@ function loadNextQuestion() {
     selected.checked = false
     currentQuestion++
     if (currentQuestion === totalQuestions.value) {
-        //***nextButton.textContent = 'Finish Quiz'***//
+
+    }
+    if (currentQuestion === totalQuestions) {
+        finishQuiz()
+        return
+    }
+    loadQuestions(currentQuestion)
+}
+loadQuestions(currentQuestion)
+
+// previous button makes user go back 1 question
+function loadPrevQuestion() {
+    var selected = document.querySelector('input[type=radio]:checked')
+    if (!selected) {
+        alert("Must select a possible answer.")
+        return
+    }
+    selected.checked = false
+    currentQuestion--
+    if (currentQuestion === totalQuestions.value) {
 
     }
     if (currentQuestion === totalQuestions) {
@@ -76,4 +99,4 @@ loadQuestions(currentQuestion)
 // Event listner for next and previous question buttons
 $("#nextButton").click(loadNextQuestion)
 $("#startBtn").click(timer)
-//$("#prevButton").click(loadPrevQuestion)
+$("#prevButton").click(loadPrevQuestion)
