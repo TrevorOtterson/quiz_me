@@ -1,17 +1,6 @@
-# 04 Web APIs: Code Quiz
-
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
-
-## User Story
-
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+In this project I created a web API. This is a short quiz of simple coding questions. I created a start button, countdown timer, score, questions, previous and next question buttons, and stored all the data in local storage. I was able to store the scores and initials with each quiz score. I made each container disappear with each seperate page and terminate the timer along with the questions to display the users score.
 
 ## Acceptance Criteria
-
 ```
 GIVEN I am taking a code quiz
 WHEN I click the start button
@@ -29,14 +18,3 @@ THEN I can save my initials and score
 The following animation demonstrates the application functionality:
 
 ![code quiz](./Assets/04-web-apis-homework-demo.gif)
-
-### Review
-
-You are required to submit the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

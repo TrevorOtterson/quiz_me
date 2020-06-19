@@ -1,8 +1,8 @@
-.body{
+.body {
     background: whitesmoke;
 }
 
-.container{
+.container {
     margin: 15%;
     height: 50%;
     width: 70%;
@@ -13,7 +13,7 @@
     box-shadow: rgb(0, 0, 0);
 }
 
-.container2{
+.container2 {
     margin: 9%;
     margin-left: 30%;
     height: 4%;
@@ -27,7 +27,7 @@
     font-family: 'MuseoModerno', cursive;
 }
 
-.quizTitle{
+.quizTitle {
     vertical-align: top;
     text-align: center;
     font-size: 30px;
@@ -36,7 +36,7 @@
     padding-bottom: 3%;
 }
 
-.question{
+.question {
     padding: 1%;
     font-size: 24px;
     background: rgb(255, 196, 196);
@@ -45,19 +45,19 @@
     margin: 10px, 0, 10px, 0;
 }
 
-.option{
+.option {
     margin-top: 10px;
     width: 100%;
     display: block;
     background: rgba(255, 230, 230, 0.87);
     padding-left: 1%;
 }
-.option:hover{
+.option:hover {
     background: rgb(255, 196, 196);
     color: black;
 }
 
-.next_button{
+.next_button {
     font-family: 'MuseoModerno', cursive;
     float: right;
     vertical-align: bottom;
@@ -65,12 +65,12 @@
     margin-top: 1%;
     font-size: 14px;
 }
-.next_button:hover{
+.next_button:hover {
     background-color: cornflowerblue;
     color: white;
 }
 
-.prev_button{
+.prev_button {
     font-family: 'MuseoModerno', cursive;
     float: left;
     vertical-align: bottom;
@@ -78,26 +78,26 @@
     margin-top: 1%;
     font-size: 14px;
 }
-.prev_button:hover{
+.prev_button:hover {
     background-color: cornflowerblue;
     color: white
 }
 
-#timer{
+#timer {
     font-family: 'MuseoModerno', cursive;
     color: red;
 }
 
-#startBtn{
+#startBtn {
     font-family: 'MuseoModerno', cursive;
     border:1px solid black;
 }
-#startBtn:hover{
+#startBtn:hover {
     background-color: cornflowerblue;
     color: white
 }
 
-.container_result{
+.container_result {
     margin: 30%;
     height: 15%;
     width: 40%;
