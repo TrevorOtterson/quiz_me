@@ -28,17 +28,17 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-  <!-- Start jumbotron with start button -->
+  <!-- Start jumbotron with start button
   <div class="jumbotron">
     <h1 class="display-4">Coding Quiz</h1>
     <p class="lead">This is a 3 question quiz on basic knowledge of coding.</p>
     <hr class="my-4">
     <p>Click the 'Begin Quiz' button to start.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Begin Quiz</a>
-  </div>
+    <a class="btn btn-primary btn-md" href="#" role="button">Begin Quiz</a>
+  </div> -->
 
-  <!-- Questions and buttons -->  
-  <div id="quizContainer" class="container">
+  <!-- Questions and buttons -->
+  <div id="quizContainer" class="container" style="display: none;">
     <div class="quizTitle">« Coding Quiz «</div>
     <div id="questions" class="question"></div>
     <label class="option"><input type="radio" name="option" value="1"><span id="opt1"></span></label>
@@ -50,14 +50,22 @@
   </div>
   <div id="results" class="container_result" style="display:none">
   </div>
+  <form id = "message-box" style="display: none;">
+    <label for="init">Initials:</label><br>
+    <input id="initials">
+    <button id = "enterInit">Enter</button>
+  </form>
+<div id="highScores" style="display: none;">
+    <h3>High Scores</h3>
+    <ul id = "highscoreList"></ul>
+</div>
 
   <!-- Timer -->
   <button id="startBtn">Start Quiz</button>
-  <div id="timerContainer" class="container2">
+  <div id="timerContainer" class="container2" style="display: none;">
     <div class="timerTitle">Time Remaining = <span id="timer"></span></div>
   </div>
 
-  <script src="questions.js"></script>
   <script src="script.js"></script>
 </body>
 
