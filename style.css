@@ -120,3 +120,23 @@
     text-align: center;
     vertical-align: center;
 }
+
+#message-box {
+    font-family: 'MuseoModerno', cursive;
+    text-align: left;
+    margin: 20%;
+    margin-left: 35%;
+    height: 15%;
+    width: 40%;
+    font-size: 25px;
+    position: absolute;
+}
+
+#enterInit {
+    border: 2px solid black
+}
+
+#enterInit:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
