@@ -1,6 +1,7 @@
 In this project I created a web API. This is a short quiz of simple coding questions. I created a start button, countdown timer, score, questions, previous and next question buttons, and stored all the data in local storage. I was able to store the scores and initials with each quiz score. I made each container disappear with each seperate page and terminate the timer along with the questions to display the users score.
 
-## Acceptance Criteria
+<h3>Parameters</h3>
+
 ```
 GIVEN I am taking a code quiz
 WHEN I click the start button
@@ -15,6 +16,9 @@ WHEN the game is over
 THEN I can save my initials and score
 ```
 
-The following animation demonstrates the application functionality:
+<h3>Link To Website</h3>
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+<a>https://trevorotterson.github.io/quiz_me/</a>
+
+<h3>Screenshots Of Pages</h3>
+
