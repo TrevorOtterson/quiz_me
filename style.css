@@ -78,6 +78,7 @@
     margin-top: 1%;
     font-size: 14px;
 }
+
 .prev_button:hover {
     background-color: cornflowerblue;
     color: white
@@ -90,8 +91,15 @@
 
 #startBtn {
     font-family: 'MuseoModerno', cursive;
-    border:1px solid black;
+    border:2px solid black;
+    margin: 30%;
+    height: 15%;
+    width: 40%;
+    font-size: 45px;
+    position: absolute;
+
 }
+
 #startBtn:hover {
     background-color: cornflowerblue;
     color: white

@@ -29,6 +29,7 @@ function timer() {
     time = setInterval(interval, 1000)
     timeContainer.show()
     container.show()
+    startBtn.hide()
 }
 
 // Creates a countdown and finishes quiz when timer hits zero.
@@ -62,6 +63,7 @@ var results = document.getElementById("results")
 var initials = document.getElementById("initials")
 var messageBox = $("#message-box")
 var displayScore = $("#highScores")
+var startBtn = $("#startBtn")
 
 // Pulls questions objects out of array in questions.js
 function loadQuestions(qIndex) {
@@ -154,6 +156,7 @@ enterBtn.addEventListener("click", function() {
     }
 })
 
+// Displays initials and scores in html
 function displayHighScore() {
     displayScore.show()
     var highScoreList = JSON.parse(localStorage.getItem("inputInitScore"))
